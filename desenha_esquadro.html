@@ -1,0 +1,42 @@
+<!-- esquadro.html -->
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+   function esquadroMaior (xa, ya, xc, yc, cor) { 
+    pincel.fillStyle= cor;
+    pincel.beginPath();
+    pincel.moveTo(xa, ya);
+    pincel.lineTo(xa, yc);
+    pincel.lineTo(xc, yc);
+    pincel.fill();
+
+}
+
+esquadroMaior (50, 50, 400, 400, 'black');
+
+   function esquadroMenor (xa, ya, xc, yc, cor) { 
+    pincel.fillStyle= cor;
+    pincel.beginPath();
+    pincel.moveTo(xa, ya);
+    pincel.lineTo(xa, yc);
+    pincel.lineTo(xc, yc);
+    pincel.fill();
+
+}
+
+
+
+function desenhaEsquadro () {
+esquadroMaior (50, 50, 400, 400, 'black');
+esquadroMenor (100, 175, 275, 350, 'white');
+
+}
+
+desenhaEsquadro();
+
+</script>
